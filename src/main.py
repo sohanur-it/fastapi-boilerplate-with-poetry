@@ -5,7 +5,7 @@ app = FastAPI()
 
 @app.get("/")
 def index():
-    return {"message": "hello"}
+    return {"message": "this is fastapi app"}
 
 def start():
     uvicorn.run("src.main:app", host="0.0.0.0", port=8000, reload=True)
