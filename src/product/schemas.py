@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-
+from src.seller.schemas import DisplaySeller
 
 class Product(BaseModel):
     name : str
@@ -9,8 +9,9 @@ class Product(BaseModel):
 class DisplayProduct(BaseModel):
     name: str
     description: str
+    seller: DisplaySeller
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
